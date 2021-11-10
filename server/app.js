@@ -11,7 +11,7 @@ app.get("/test", async (req, res) => {
       `
   SELECT * FROM products`
     )
-    .then((data) => res.send(data))
+    .then((data) => res.send(data.rows))
     .catch((err) => console.log(err));
 });
 
