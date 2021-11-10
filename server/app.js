@@ -3,8 +3,16 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
-app.get("/test", (req, res) => {
-  res.send("Working...?");
+const db = require("./config/db.config");
+
+app.get("/test", async (req, res) => {
+  await db
+    .query(
+      `
+  SELECT * FROM products`
+    )
+    .then((data) => res.send(data))
+    .catch((err) => console.log(err));
 });
 
 app.get("/api/products", (req, res) => {});
