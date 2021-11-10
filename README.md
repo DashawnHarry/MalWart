@@ -7,3 +7,7 @@ In order to populate the database with a table, you have to run the database.sql
 Window users commands: psql -U postgres -f database/database.sql
 database/migration.sql
 database/seed.sql
+
+Mac users commands: psql -f database/database.sql
+database/migration.sql
+database/seed.sql
