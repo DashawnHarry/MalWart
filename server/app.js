@@ -1,10 +1,21 @@
 require("dotenv").config();
+// const path = require("path");
 
 const express = require("express");
 const app = express();
 
-app.get("/test", (req, res) => {
-  res.send("Working...?");
+app.use(express.static("../client/dist"));
+
+const db = require("./config/db.config");
+
+app.get("/test", async (req, res) => {
+  await db
+    .query(
+      `
+  SELECT * FROM products`
+    )
+    .then((data) => res.send(data.rows))
+    .catch((err) => console.log(err));
 });
 
 app.get("/api/products", (req, res) => {});
