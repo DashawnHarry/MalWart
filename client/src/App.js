@@ -13,9 +13,14 @@ export default class App extends Component {
 
   render() {
     return (
+      <React.Fragment>
       <Button className="button" variant="contained" onClick={this.handleClick}>
         CSS God Button
       </Button>
+      <Button className="departments" variant="contained">Departments</Button>
+      <Button className="items" variant="contained">Myitems</Button>
+      <Button className="account" variant="contained">MyAccount</Button>
+      </React.Fragment>
     );
   }
 }
