@@ -1,8 +1,6 @@
 # MalWart
 
-Front end capstone team project for MCSP-09.
-
-### DATABASE:
+## DATABASE:
 
 In order to populate the database with a table, you have to run the database.sql file then run the migration.sql file onto the database. After that you can run seed.sql to add data into the table.
 
@@ -22,7 +20,21 @@ Mac users commands:
 - psql -f database/migration.sql
 - psql -f database/seed.sql
 
-### Git Workflow
+Python Option:
+
+There is a simple python file to make this process simpler. It is only for use on windows and mac machines currently.
+
+- Note: make sure you have python 3 installed.
+
+At the project root, run:
+
+```
+python3 setup_db.py
+```
+
+---
+
+## Git Workflow
 
 There is a simple python file to ease the repetitivity of switching back and forth from branches through the workflow.
 
@@ -41,3 +53,5 @@ git push
 ```
 python3 git_workflow.py <The name of your feature branch>
 ```
+
+---
