@@ -14,5 +14,5 @@ Window users .env file:
 
 Mac users commands: 
 - psql -f database/database.sql
-- psql -U postgres -f database/migration.sql
-- psql -U postgres -f database/seed.sql
+- psql -f database/migration.sql
+- psql -f database/seed.sql
