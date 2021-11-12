@@ -17,7 +17,7 @@ app.get("/api/products", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.post("/api/search/:product_id", (req, res) => {
+app.get("/api/search/:product_id", (req, res) => {
   const id = req.params.product_id;
   await db
     .query(`SELECT * FROM producst WHERE id = $1`, id)
