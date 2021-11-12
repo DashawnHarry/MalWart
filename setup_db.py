@@ -7,7 +7,6 @@ error = '\033[37m\033[41m'
 
 def windowCommands():
     try:
-        os.system('psql -U postgres -f server/database/database.sql malwartdb')
         os.system('psql -U postgres -f server/database/migration.sql malwartdb')
         os.system('psql -U postgres -f server/database/seed.sql malwartdb')
     except Exception:
@@ -19,7 +18,6 @@ def windowCommands():
 
 def macCommands():
     try:
-        os.system('psql -f server/database/database.sql MalWartDB')
         os.system('psql -f server/database/migration.sql MalWartDB')
         os.system('psql -f server/database/seed.sql MalWartDB')
     except Exception:
