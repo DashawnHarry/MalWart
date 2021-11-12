@@ -13,11 +13,11 @@ In order to populate the database with a table, you have to run the database.sql
 #### Window users commands:
 
 ```
-- psql -U postgres -f database/migration.sql malwartdb
+psql -U postgres -f database/migration.sql malwartdb
 ```
 
 ```
-psql -U postgres -f database/seed.sql
+psql -U postgres -f database/seed.sql malwartdb
 ```
 
 #### Mac users commands:
@@ -27,7 +27,7 @@ psql -f database/migration.sql MalWartDB
 ```
 
 ```
-psql -f database/seed.sql
+psql -f database/seed.sql MalWartDB
 ```
 
 #### Python Option:
