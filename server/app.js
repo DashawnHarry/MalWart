@@ -3,11 +3,14 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
+// Serve static files.
 app.use(express.static("../client/dist"));
 
+// Database set up.
 const db = require("./config/db.config");
 const sanitizer = require("sanitizer");
 
+// Route to return 10 full product results from the database.
 app.get("/api/products", async (req, res) => {
   await db
     .query(`SELECT * FROM products LIMIT 10`)
@@ -15,6 +18,7 @@ app.get("/api/products", async (req, res) => {
     .catch((err) => console.log(err));
 });
 
+// Route to return one full product result based on the id.
 app.get("/api/id/:product_id", async (req, res) => {
   const id = req.params.product_id;
   await db
@@ -23,12 +27,15 @@ app.get("/api/id/:product_id", async (req, res) => {
     .catch((err) => console.log(err));
 });
 
+// Route to search the product names and compare with search input.
 app.get("/api/name/:name", async (req, res) => {
   const name = req.params.name.toLowerCase();
   const nameSanitized = sanitizer.escape(name);
 
   await db
-    .query(`SELECT id, name FROM products WHERE name LIKE '%${nameSanitized}%'`)
+    .query(
+      `SELECT id, title FROM products WHERE name LIKE '%${nameSanitized}%'`
+    )
     .then((data) => res.send(data.rows))
     .catch((err) => console.log(err));
 });
