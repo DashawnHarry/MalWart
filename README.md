@@ -49,6 +49,10 @@ There is a simple javascript file to ease the repetitivity of switching back and
 #### Git workflow steps:
 
 ```
+git add <The files to be added>
+```
+
+```
 git commit -m "<Replace with your message>"
 ```
 
