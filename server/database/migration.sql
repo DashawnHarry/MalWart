@@ -7,5 +7,8 @@ CREATE TABLE products(
     image text NOT NULL,
     description text NOT NULL,
     review int,
-    categories varchar(255) NOT NULL
+    categories varchar(255) NOT NULL,
+    title text NOT NULL
 );
+
+
