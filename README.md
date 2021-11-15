@@ -30,27 +30,27 @@ psql -f server/database/migration.sql MalWartDB
 psql -f server/database/seed.sql MalWartDB
 ```
 
-#### Python Option:
+#### Script Option:
 
-There is a simple python file to make this process simpler. It is only for use on windows and mac machines currently.
-
-- Note: make sure you have python 3 installed.
+There is a simple javascript file to make this process simpler. It is only for use on windows and mac machines currently.
 
 At the project root, run:
 
 ```
-python3 setup_db.py
+node dbsetup.js
 ```
 
 ---
 
 ## Git Workflow
 
-There is a simple python file to ease the repetitivity of switching back and forth from branches through the workflow.
-
-- Note: make sure you have python 3 installed.
+There is a simple javascript file to ease the repetitivity of switching back and forth from branches through the workflow.
 
 #### Git workflow steps:
+
+```
+git add <The files to be added>
+```
 
 ```
 git commit -m "<Replace with your message>"
@@ -61,7 +61,7 @@ git push
 ```
 
 ```
-python3 git_workflow.py <The name of your feature branch>
+node git.js <The name of your feature branch>
 ```
 
 ---
