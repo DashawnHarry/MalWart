@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "test": "test",
-    "start-dev": "webpack serve --open"
+    "start-dev": "webpack serve --open",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "@mui/material": "^5.1.0",
     "@mui/styled-engine-sc": "^5.1.0",
     "axios": "^0.24.0",
+    "bootstrap": "^3.4.1",
     "dotenv": "^10.0.0",
     "jquery": "^3.6.0",
     "react": "^17.0.2",
