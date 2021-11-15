@@ -1,6 +1,8 @@
 import React from "react";
+import './HeroCarousel.css'
 
-const HeroCarousel = () => {
+const HeroCarousel = (props) => {
+  console.log(props)
   return (
     <React.Fragment>
       <div
@@ -28,7 +30,7 @@ const HeroCarousel = () => {
             </div>
             <img
               className="d-block w-80"
-              src={this.state.products[7]}
+              src={props.products[7]}
               alt="First slide"
             ></img>
           </div>
@@ -41,7 +43,7 @@ const HeroCarousel = () => {
             </div>
             <img
               className="d-block w-80"
-              src={this.state.products[8]}
+              src={props.products[8]}
               alt="Second slide"
             ></img>
           </div>
@@ -54,7 +56,7 @@ const HeroCarousel = () => {
             </div>
             <img
               className="d-block w-80"
-              src={this.state.products[4]}
+              src={props.products[4]}
               alt="Third slide"
             ></img>
           </div>
