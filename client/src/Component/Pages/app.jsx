@@ -15,7 +15,7 @@ export default class Home extends Component {
     };
   }
 
-  handleClick() {}
+  handleClick() { }
 
   componentDidMount() {
     $.get("/api/products").then((data) => {
@@ -26,12 +26,12 @@ export default class Home extends Component {
   }
 
   render() {
-    console.log("error " + this.state.products.length);
+
     return (
       <React.Fragment>
-        <HeroCarousel products={this.state.products}/>
-        <ProductCategory products={this.state.products}/>
-        <NavBar/>
+        <NavBar />
+        <HeroCarousel products={this.state.products} />
+        <ProductCategory products={this.state.products} />
       </React.Fragment>
     );
   }

@@ -5,9 +5,9 @@ import {
   Route
 }
   from 'react-router-dom'
-import Home from "./Component/Pages/app";
-import NavBar from "./Component/Components/NavBar";
-
+import Home from "../Component/Pages/app";
+import NavBar from "../Component/Components/NavBar";
+import ProductDescriptionHome from "../Component/Pages/productdesription.jsx";
 
 export default class App extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ export default class App extends Component {
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='nav' element={<NavBar />} />
+          <Route path='nav' element={<ProductDescriptionHome />} />
         </Routes>
       </Router>
     );

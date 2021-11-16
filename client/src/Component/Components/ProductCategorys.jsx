@@ -10,9 +10,6 @@ const ProductCategory = (props) => {
         <CategoryBox products={props.products} />
         <CategoryBox products={props.products} />
         <CategoryBox products={props.products} />
-        <CategoryBox products={props.products} />
-        <CategoryBox products={props.products} />
-
       </div>
     </React.Fragment>
   );
