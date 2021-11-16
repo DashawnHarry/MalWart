@@ -28,16 +28,10 @@ const navigate = useNavigate()
     return array
   }
   const handleClick = (e) => {
+    // props.id = e.target.id
     console.log(e.target.id)
     navigate(`/id/${e.target.id}`)
   }
-  // <img
-  //   className="d-block w-20"
-  //   src={props.products[7]}
-  //   alt="First slide"
-  // ></img>
-
-
   return (
     <>
       <div className="product box">

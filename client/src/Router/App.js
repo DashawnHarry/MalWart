@@ -4,7 +4,10 @@ import {
   Routes,
   Route
 }
-  from 'react-router-dom'
+from 'react-router-dom'
+
+
+
 import Home from "../Component/Pages/app";
 import NavBar from "../Component/Components/NavBar";
 import ProductDescriptionHome from "../Component/Pages/productdesription.jsx";
@@ -12,7 +15,9 @@ import ProductDescriptionHome from "../Component/Pages/productdesription.jsx";
 export default class App extends Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      id: 2
+    }
 
   }
   render() {
@@ -20,9 +25,9 @@ export default class App extends Component {
     return (
       <Router>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home id={this.state.id} />} />
           <Route path='id' element={<ProductDescriptionHome />} >
-          <Route path=':id' element={<ProductDescriptionHome />}/>
+            <Route path=':id' element={<ProductDescriptionHome />} />
           </Route>
         </Routes>
       </Router>

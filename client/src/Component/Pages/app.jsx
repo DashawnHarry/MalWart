@@ -29,7 +29,7 @@ export default class Home extends Component {
       <React.Fragment>
         <NavBar />
         <HeroCarousel products={this.state.products} />
-        <ProductCategory products={this.state.products} />
+        <ProductCategory products={this.state.products} id={this.props.id} />
       </React.Fragment>
     );
   }
