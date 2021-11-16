@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import Button from "@mui/material/Button";
 import $ from "jquery";
-import HeroCarousel from "./Component/HeroCarousel";
-import ProductCategory from "./Component/ProductCategorys";
-import NavBar from "./Component/NavBar";
 
-export default class App extends Component {
+import HeroCarousel from "../Components/HeroCarousel";
+import ProductCategory from "../Components/ProductCategorys";
+import NavBar from "../Components/NavBar";
+
+
+export default class Home extends Component {
   constructor(props) {
     super(props);
 
@@ -14,7 +15,7 @@ export default class App extends Component {
     };
   }
 
-  handleClick() {}
+  handleClick() { }
 
   componentDidMount() {
     $.get("/api/products").then((data) => {
@@ -25,12 +26,12 @@ export default class App extends Component {
   }
 
   render() {
-    console.log("error " + this.state.products.length);
+
     return (
       <React.Fragment>
-        <HeroCarousel products={this.state.products}/>
-        <ProductCategory products={this.state.products}/>
-        <NavBar/>
+        <NavBar />
+        <HeroCarousel products={this.state.products} />
+        <ProductCategory products={this.state.products} />
       </React.Fragment>
     );
   }
