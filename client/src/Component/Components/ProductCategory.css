@@ -1,0 +1,35 @@
+.product.categorys{
+    background-color: #8EA8C3;
+    height: 370px;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    }
+    .product.box{
+        margin-top: 30px;
+        margin-left: 50px;
+        height: 300px;
+        width: 300px;
+        background-color: #406E8E;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 19px;
+        font-family: sans-serif;
+        
+    }
+
+    .d-block.w-20{
+        margin: 1px;
+        height: 100px;
+        width: 100px;
+    }
+    .productview{
+        display: flex;
+      flex-wrap: wrap;
+        height: 280px;
+        width: 300px;
+        justify-content: space-evenly;
+      
+    }

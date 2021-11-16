@@ -1,0 +1,38 @@
+#carouselExampleSlidesOnly{
+    margin-top: 150px;
+    
+}
+
+.d-block{
+    width: 700px;
+    height: 400px;
+
+}
+
+.carousel-item.active{
+    display: flex;
+}
+
+.carouselink{
+display: flex;
+    float: left;
+background-color: #8EA8C3;
+height: 400px;
+
+align-items: center;
+align-content: center;
+
+
+
+}
+
+.carouselhead{
+    text-align: center;
+    margin: 50px;
+    margin-right: 9px;
+}
+.btn.btn-primary{
+    margin-right: 20px;
+    border-radius: 20px;
+    background-color: #406E8E;
+}
