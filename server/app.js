@@ -6,8 +6,9 @@ const app = express();
 // Serve static files.
 app.use(express.static("../client/dist"));
 
-app.get("/id/:product_id", (req, res) => {
-  res.sendFile("../client/dist/index.html");
+// Static route for specific product
+app.get("/id/:id", (req, res) => {
+  res.sendFile("index.html", { root: "../client/dist" });
 });
 
 // Database set up.
