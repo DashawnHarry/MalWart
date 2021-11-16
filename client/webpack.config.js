@@ -33,8 +33,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: "head",
       template: "./public/index.html",
       filename: "index.html",
+      publicPath: "/",
     }),
   ],
   optimization: {
