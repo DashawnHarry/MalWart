@@ -21,7 +21,9 @@ export default class App extends Component {
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='nav' element={<ProductDescriptionHome />} />
+          <Route path='id' element={<ProductDescriptionHome />} >
+          <Route path=':id' element={<ProductDescriptionHome />}/>
+          </Route>
         </Routes>
       </Router>
     );

@@ -19,9 +19,7 @@ export default class Home extends Component {
 
   componentDidMount() {
     $.get("/api/products").then((data) => {
-      const arraytemp = data.map((url) => url.image);
-      console.log(data);
-      this.setState({ products: [...arraytemp] });
+      this.setState({ products: data });
     });
   }
 

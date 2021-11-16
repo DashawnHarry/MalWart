@@ -10,10 +10,10 @@ app.use(express.static("../client/dist"));
 const db = require("./config/db.config");
 const sanitizer = require("sanitizer");
 
-// Route to return 10 full product results from the database.
+// Route to return all full product results from the database.
 app.get("/api/products", async (req, res) => {
   await db
-    .query(`SELECT * FROM products LIMIT 10`)
+    .query(`SELECT * FROM products`)
     .then((data) => res.send(data.rows))
     .catch((err) => console.log(err));
 });
