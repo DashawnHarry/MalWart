@@ -3,6 +3,9 @@
     height: 370px;
     border-radius: 25px;
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: space-evenly;
     }
     .product.box{
         margin-top: 30px;
