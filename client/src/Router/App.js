@@ -21,13 +21,12 @@ export default class App extends Component {
 
   }
   render() {
-
     return (
       <Router>
         <Routes>
-          <Route path='/' element={<Home id={this.state.id} />} />
-          <Route path='id' element={<ProductDescriptionHome />} >
-            <Route path=':id' element={<ProductDescriptionHome />} />
+          <Route path="/" element={<Home />} />
+          <Route path="id" element={<ProductDescriptionHome />}>
+            <Route path=":id" element={<ProductDescriptionHome />} />
           </Route>
         </Routes>
       </Router>

@@ -1,8 +1,8 @@
 import React from "react";
-import './HeroCarousel.css'
+import "./HeroCarousel.css";
 
 const HeroCarousel = (props) => {
-  console.log(props)
+  console.log(props);
   return (
     <React.Fragment>
       <div

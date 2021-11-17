@@ -1,37 +1,39 @@
-import React from 'react'
-import './ProductCategory.css'
-import { Link , useNavigate} from 'react-router-dom'
-
-
+import React from "react";
+import "./ProductCategory.css";
+import { Link, useNavigate } from "react-router-dom";
 
 export const CategoryBox = (props) => {
-
-const navigate = useNavigate()
-
-
-
-
+  const navigate = useNavigate();
 
   const handleCategorybox = (start, end) => {
-    let array = []
+    let array = [];
     if (props.products.length !== 0) {
       for (start; start <= end; start++) {
-        const obj = props.products[start]
-        console.log(obj.name)
+        const obj = props.products[start];
+
         array.push(
-          <div id='productimagecategory' key={props.products[start].id} onClick={handleClick}>
-            <img id={props.products[start].id} className="d-block w-20" key={props.products[start].id} src={props.products[start].image} />
+          <div
+            id="productimagecategory"
+            key={props.products[start].id}
+            onClick={handleClick}
+          >
+            <img
+              id={props.products[start].id}
+              className="d-block w-20"
+              key={props.products[start].id}
+              src={props.products[start].image}
+            />
           </div>
-        )
+        );
       }
     }
-    return array
-  }
+    return array;
+  };
   const handleClick = (e) => {
     // props.id = e.target.id
-    console.log(e.target.id)
-    navigate(`/id/${e.target.id}`)
-  }
+
+    navigate(`/id/${e.target.id}`);
+  };
   return (
     <>
       <div className="product box">
@@ -39,15 +41,11 @@ const navigate = useNavigate()
         <div id="catagorycarousel" className="carousel" data-ride="carousel">
           <div className="carouselInner">
             <div className="carousel-item active">
-              <div className="productview">
-                {handleCategorybox(2, 5)}
-              </div>
+              <div className="productview">{handleCategorybox(2, 5)}</div>
             </div>
 
             <div className="carousel-item">
-              <div className="productview">
-                {handleCategorybox(13, 16)}
-              </div>
+              <div className="productview">{handleCategorybox(13, 16)}</div>
             </div>
           </div>
 
@@ -77,8 +75,6 @@ const navigate = useNavigate()
           </a>
         </div>
       </div>
-
     </>
-  )
-
-}
+  );
+};

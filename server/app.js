@@ -6,6 +6,11 @@ const app = express();
 // Serve static files.
 app.use(express.static("../client/dist"));
 
+// Static route for specific product
+app.get("/id/:id", (req, res) => {
+  res.sendFile("index.html", { root: "../client/dist" });
+});
+
 // Database set up.
 const db = require("./config/db.config");
 const sanitizer = require("sanitizer");
