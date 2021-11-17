@@ -7,9 +7,9 @@ const ProductCategory = (props) => {
   return (
     <React.Fragment>
       <div className="product categorys">
-        <CategoryBox products={props.products} />
-        <CategoryBox products={props.products} />
-        <CategoryBox products={props.products} />
+        <CategoryBox products={props.products} id={props.id} />
+        <CategoryBox products={props.products} id={props.id}/>
+        <CategoryBox products={props.products} id={props.id}/>
       </div>
     </React.Fragment>
   );

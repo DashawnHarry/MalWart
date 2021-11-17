@@ -19,9 +19,7 @@ export default class Home extends Component {
 
   componentDidMount() {
     $.get("/api/products").then((data) => {
-      const arraytemp = data.map((url) => url.image);
-      console.log(arraytemp);
-      this.setState({ products: [...arraytemp] });
+      this.setState({ products: data });
     });
   }
 
@@ -31,7 +29,7 @@ export default class Home extends Component {
       <React.Fragment>
         <NavBar />
         <HeroCarousel products={this.state.products} />
-        <ProductCategory products={this.state.products} />
+        <ProductCategory products={this.state.products} id={this.props.id} />
       </React.Fragment>
     );
   }

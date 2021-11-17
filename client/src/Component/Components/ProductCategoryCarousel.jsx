@@ -1,10 +1,39 @@
-import React from 'react'
-import './ProductCategory.css'
-import { Link } from 'react-router-dom'
-
-
+import React from "react";
+import "./ProductCategory.css";
+import { Link, useNavigate } from "react-router-dom";
 
 export const CategoryBox = (props) => {
+  const navigate = useNavigate();
+
+  const handleCategorybox = (start, end) => {
+    let array = [];
+    if (props.products.length !== 0) {
+      for (start; start <= end; start++) {
+        const obj = props.products[start];
+
+        array.push(
+          <div
+            id="productimagecategory"
+            key={props.products[start].id}
+            onClick={handleClick}
+          >
+            <img
+              id={props.products[start].id}
+              className="d-block w-20"
+              key={props.products[start].id}
+              src={props.products[start].image}
+            />
+          </div>
+        );
+      }
+    }
+    return array;
+  };
+  const handleClick = (e) => {
+    // props.id = e.target.id
+
+    navigate(`/id/${e.target.id}`);
+  };
   return (
     <>
       <div className="product box">
@@ -12,55 +41,11 @@ export const CategoryBox = (props) => {
         <div id="catagorycarousel" className="carousel" data-ride="carousel">
           <div className="carouselInner">
             <div className="carousel-item active">
-              <div className="productview">
-                <Link to='nav'>
-                  <img
-                    className="d-block w-20"
-                    src={props.products[7]}
-                    alt="First slide"
-                  ></img>
-                </Link>
-                <img
-                  className="d-block w-20"
-                  src={props.products[2]}
-                  alt="First slide"
-                ></img>
-                <img
-                  className="d-block w-20"
-                  src={props.products[7]}
-                  alt="First slide"
-                ></img>
-                <img
-                  className="d-block w-20"
-                  src={props.products[2]}
-                  alt="First slide"
-                ></img>
-              </div>
+              <div className="productview">{handleCategorybox(2, 5)}</div>
             </div>
 
             <div className="carousel-item">
-              <div className="productview">
-                <img
-                  className="d-block w-20"
-                  src={props.products[2]}
-                  alt="First slide"
-                ></img>
-                <img
-                  className="d-block w-20"
-                  src={props.products[7]}
-                  alt="First slide"
-                ></img>
-                <img
-                  className="d-block w-20"
-                  src={props.products[2]}
-                  alt="First slide"
-                ></img>
-                <img
-                  className="d-block w-20"
-                  src={props.products[7]}
-                  alt="First slide"
-                ></img>
-              </div>
+              <div className="productview">{handleCategorybox(13, 16)}</div>
             </div>
           </div>
 
@@ -90,8 +75,6 @@ export const CategoryBox = (props) => {
           </a>
         </div>
       </div>
-
     </>
-  )
-
-}
+  );
+};
