@@ -2,6 +2,7 @@ import React from "react";
 import "./ProductCategory.css";
 import { Link, useNavigate } from "react-router-dom";
 
+
 export const CategoryBox = (props) => {
   const navigate = useNavigate();
 
@@ -13,7 +14,8 @@ export const CategoryBox = (props) => {
 
         array.push(
           <div
-            id="productimagecategory"
+          data-aos="fade-in"  
+          id="productimagecategory"
             key={props.products[start].id}
             onClick={handleClick}
           >
@@ -36,22 +38,21 @@ export const CategoryBox = (props) => {
   };
   return (
     <>
-      <div className="product box">
-        <div>Christmas Selection</div>
-        <div id="catagorycarousel" className="carousel" data-ride="carousel">
+      <div data-aos="fade-in" data-aos-duration="3000" className="product box">
+        <div id="categorycarousel" className="carousel" data-ride="carousel">
           <div className="carouselInner">
             <div className="carousel-item active">
-              <div className="productview">{handleCategorybox(2, 5)}</div>
+              <div className="productview">{handleCategorybox(1, 4)}</div>
             </div>
 
             <div className="carousel-item">
-              <div className="productview">{handleCategorybox(13, 16)}</div>
+              <div className="productview">{handleCategorybox(5, 8)}</div>
             </div>
           </div>
 
           <a
             className="carousel-control-prev"
-            href="#catagorycarousel"
+            href="#categorycarousel"
             role="button"
             data-slide="prev"
           >
@@ -63,7 +64,7 @@ export const CategoryBox = (props) => {
           </a>
           <a
             className="carousel-control-next"
-            href="#catagorycarousel"
+            href="#categorycarousel"
             role="button"
             data-slide="next"
           >

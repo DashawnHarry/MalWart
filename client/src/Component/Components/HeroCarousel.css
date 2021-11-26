@@ -1,38 +1,65 @@
-#carouselExampleSlidesOnly{
-    margin-top: 10px;
-    
+#carouselExampleSlidesOnly {
+  margin-top: 10px;
+  border-radius: 20px;
 }
 
-.d-block{
-    width: 700px;
-    height: 400px;
-
+.d-block {
+  width: 700px;
+  height: 400px;
 }
 
-.carousel-item.active{
-    display: flex;
+.carousel-item.active {
+  display: flex;
 }
 
-.carouselink{
-display: flex;
-    float: left;
-background-color: #8EA8C3;
-height: 400px;
+.carouselink {
+  display: flex;
+  float: left;
+  background-color: #8ea8c3;
+  height: 400px;
 
-align-items: center;
-align-content: center;
-
-
-
+  align-items: center;
+  align-content: center;
 }
 
-.carouselhead{
-    text-align: center;
-    margin: 50px;
-    margin-right: 9px;
+.carouselhead {
+  text-align: center;
+  margin: 50px;
+  margin-right: 9px;
 }
-.btn.btn-primary{
-    margin-right: 20px;
-    border-radius: 20px;
-    background-color: #406E8E;
+.btn.btn-primary {
+  margin-right: 20px;
+  border-radius: 20px;
+  background-color: #406e8e;
+}
+.videoTag {
+  height: 300px;
+  width: 300px;
+  float: left;
+}
+#overlay {
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  background: black;
+  opacity: 0.2;
+}
+#videotext {
+  position: absolute;
+  color: white;
+  font-size: 100px;
+  padding: 0% 15%;
+  z-index: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#videocontainer {
+  text-align: center;
+}
+.carousel-inner {
+  border-radius: 80px;
+  box-shadow: 13px 10px 17px rgb(71, 71, 71);
 }
