@@ -5,7 +5,6 @@ import HeroCarousel from "../Components/HeroCarousel";
 import ProductCategory from "../Components/ProductCategorys";
 import NavBar from "../Components/NavBar";
 
-
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +14,7 @@ export default class Home extends Component {
     };
   }
 
-  handleClick() { }
+  handleClick() {}
 
   componentDidMount() {
     $.get("/api/products").then((data) => {
@@ -24,10 +23,10 @@ export default class Home extends Component {
   }
 
   render() {
-
     return (
       <React.Fragment>
         <NavBar />
+
         <HeroCarousel products={this.state.products} />
         <ProductCategory products={this.state.products} id={this.props.id} />
       </React.Fragment>
