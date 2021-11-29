@@ -92,7 +92,7 @@ const HeroCarousel = (props) => {
         </div>
 
         <a
-          className="carousel-control-prev"
+          className="carousel-control-prev hero"
           href="#carouselExampleSlidesOnly"
           role="button"
           data-slide="prev"
@@ -104,7 +104,7 @@ const HeroCarousel = (props) => {
           <span className="sr-only">Previous</span>
         </a>
         <a
-          className="carousel-control-next"
+          className="carousel-control-next hero"
           href="#carouselExampleSlidesOnly"
           role="button"
           data-slide="next"

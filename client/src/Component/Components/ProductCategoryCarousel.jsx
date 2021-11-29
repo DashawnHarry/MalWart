@@ -51,7 +51,7 @@ export const CategoryBox = (props) => {
           </div>
 
           <a
-            className="carousel-control-prev"
+            className="carousel-control-prev category"
             href="#categorycarousel"
             role="button"
             data-slide="prev"
@@ -63,7 +63,7 @@ export const CategoryBox = (props) => {
             <span className="sr-only">Previous</span>
           </a>
           <a
-            className="carousel-control-next"
+            className="carousel-control-next category"
             href="#categorycarousel"
             role="button"
             data-slide="next"

@@ -22,13 +22,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <a className="nav-item nav-link active" href="#">
-              Departments <span className="sr-only">(current)</span>
-            </a>
-            <a className="nav-item nav-link" href="#">
-              Account
-            </a>
-            <a className="nav-item nav-link" href="#">
-              My Cart
+              My Cart <span className="sr-only">(current)</span>
             </a>
           </div>
         </div>
