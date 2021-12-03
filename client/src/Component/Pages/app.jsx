@@ -17,7 +17,7 @@ export default class Home extends Component {
   handleClick() {}
 
   componentDidMount() {
-    $.get("http://3.144.78.169/api/products").then((data) => {
+    $.get("https://3.144.78.169/api/products").then((data) => {
     console.log(data)  
     this.setState({ products: data });
     });
