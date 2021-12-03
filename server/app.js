@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 
 // Serve static files.
-// app.use(express.static("../client/dist"));
+//app.use(express.static("../client/dist"));
 
 // Static route for specific product
 app.get("/id/:id", (req, res) => {
