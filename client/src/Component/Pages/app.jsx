@@ -18,7 +18,11 @@ export default class Home extends Component {
   handleClick() {}
 
   componentDidMount() {
-    axios.get("http://3.144.78.169/api/products").then((data) => console.log(data))
+    axios.get("http://3.144.78.169/api/products", {
+    headers: {"Access-Control-Allow-Origin": "*",}
+
+
+    }).then((data) => console.log(data.data))
     
     
     // $.get("http://3.144.78.169/api/products").then((data) => {
