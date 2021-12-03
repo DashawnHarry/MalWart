@@ -10,7 +10,7 @@ const ProductDescriptionHome = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    $.get(`/api/id/${id}`).then((data) => {
+    $.get(`http://3.144.78.169/api/id/${id}`).then((data) => {
       setProduct(data);
     });
   });

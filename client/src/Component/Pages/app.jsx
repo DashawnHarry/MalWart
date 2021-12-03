@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import $ from "jquery";
+import axios from 'axios'
 
 import HeroCarousel from "../Components/HeroCarousel";
 import ProductCategory from "../Components/ProductCategorys";
@@ -17,10 +18,13 @@ export default class Home extends Component {
   handleClick() {}
 
   componentDidMount() {
-    $.get("http://3.144.78.169/api/products").then((data) => {
-    console.log(data)  
-    this.setState({ products: data });
-    });
+    axios.get("http://3.144.78.169/api/products").then((data) => console.log(data))
+    
+    
+    // $.get("http://3.144.78.169/api/products").then((data) => {
+    // console.log(data)  
+    // this.setState({ products: data });
+    // });
   }
 
   render() {
