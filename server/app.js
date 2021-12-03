@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+
 const express = require("express");
 const app = express();
 
@@ -7,15 +8,31 @@ const app = express();
 //app.use(express.static("../client/dist"));
 
 // Static route for specific product
-app.get("/id/:id", (req, res) => {
-  res.sendFile("index.html", { root: "../client/dist" });
-});
+// app.get("/id/:id", (req, res) => {
+//   res.sendFile("index.html", { root: "../client/dist" });
+// });
 
 // Database set up.
 const db = require("./config/db.config");
 const sanitizer = require("sanitizer");
 
 // Route to return all full product results from the database.
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "*");
+      //intercepts OPTIONS method
+    if ('OPTIONS' === req.method) {
+      //respond with 200
+      res.send(200);
+    }
+    else {
+    //move on
+      next();
+    }
+});
+
+
+
 app.get("/api/products", async (req, res) => {
   await db
     .query(`SELECT * FROM products`)
