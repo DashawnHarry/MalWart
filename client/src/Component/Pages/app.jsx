@@ -23,12 +23,7 @@ export default class Home extends Component {
 
 
     }).then((data) => console.log(data.data))
-    
-    
-    // $.get("http://3.144.78.169/api/products").then((data) => {
-    // console.log(data)  
-    // this.setState({ products: data });
-    // });
+  
   }
 
   render() {
